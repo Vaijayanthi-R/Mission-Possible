@@ -1,0 +1,117 @@
+.orders-page { padding: 36px 20px 60px; }
+
+.orders-list { display: flex; flex-direction: column; gap: 20px; }
+
+.order-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.order-card:hover { box-shadow: var(--shadow-lg); }
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-card-header h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.order-date {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.order-items-preview {
+  padding: 14px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.item-chip {
+  background: #F7F7F7;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.item-chip.more {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px 18px;
+  border-top: 1px solid var(--border);
+  background: #fafafa;
+}
+
+.order-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-total span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.order-total strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.order-actions { display: flex; gap: 10px; align-items: center; }
+
+.btn-view {
+  background: var(--primary);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-view:hover { background: var(--primary-dark); }
+
+.btn-cancel {
+  background: transparent;
+  color: #E53E3E;
+  border: 1px solid #FC8181;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover { background: #FED7D7; }
+
+@media (max-width: 600px) {
+  .order-card-header { flex-direction: column; gap: 10px; }
+  .order-card-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .order-actions { width: 100%; }
+  .btn-view { flex: 1; text-align: center; }
+}
